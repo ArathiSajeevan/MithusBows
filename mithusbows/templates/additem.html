@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Add new item</title>
+</head>
+<body>
+    <center>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h2>Add new item here.....</h2><br><br>
+            <input type="text" name="itemname" placeholder="Item name"><br><br>
+            <input type="text" name="description" placeholder="Description"><br><br>
+            <input type="number" name="price" placeholder="Price"><br><br>
+            <input type="file" name="image" placeholder="upload image"><br><br>
+            <input type="submit" class="btn btn-primary" name="Upload">
+
+        </form>
+    </center>
+</body>
+</html>

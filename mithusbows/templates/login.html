@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Login page</title>
+
+<!--    <style>-->
+<!--        .container{-->
+<!--            padding:25px;-->
+<!--            left-padding:25px;-->
+<!--            background-color:lightblue;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<center>
+    <br><br>
+    <form method="post" action="#">
+        {% csrf_token %}
+        <div class="container">
+            <input type="email" name="email" placeholder="email"><br><br>
+            <input type="password" name="password" placeholder="password"><br><br>
+            <input type="submit" class="btn btn-success" value="Login"><br><br>
+            <a href="/register/">Sign up</a><br><br>
+            <a href="/adminlogin/">Login as admin</a>
+        </div>
+    </form>
+</center>
+</body>
+</html>
