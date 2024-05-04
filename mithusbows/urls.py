@@ -11,6 +11,10 @@ urlpatterns = [
     path('send/',send_mail_regis),
     path('verify/<auth_token>',verify),
     path('additem/',additem),
+    path('showitem/',showitem),   #admin view items
+    path('viewitem/',viewitem),   #user view items
+    path('cart/',cart),
+
 
 
 

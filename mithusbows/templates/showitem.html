@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Show Items</title>
 </head>
 <body>
-$END$
+<center>
+    <div class="container-fluid">
+        <div class="row">
+            {% for i,j,k,l,m in item %}
+    <div class="col-3">
+        <div class="card" style="width: 18rem;height:38rem;background-color:lightblue">
+            <img src="{% static i %}" class="card-img-top" alt="...">
+            <div class="card-body">
+
+                <h3><p class="card-text">{{j}}</p></h3>
+
+                <p class="card-text">{{k}}</p>
+
+                    <p class="card-text">{{l}}</p>
+
+                <a href="#" class="btn btn-warning">EDIT</a>
+                <a href="#" class="btn btn-danger">DELETE</a>
+            </div>
+        </div>
+    </div>
+          {% endfor %}
+        </div>
+    </div>
+</center>
 </body>
 </html>

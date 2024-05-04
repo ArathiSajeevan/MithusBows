@@ -23,4 +23,16 @@ class item(models.Model):
     itemname = models.CharField(max_length=20)
     description = models.CharField(max_length=80)
     price = models.IntegerField()
+    count = models.CharField(default=True,max_length=50)
+
+
+
+# #users item showing database
+# class product(models.Model):
+#     image = models.FileField(upload_to="mithusbows/static")
+#     itemname = models.CharField(max_length=20)
+#     description = models.CharField(max_length=80)
+#     price = models.IntegerField()
+#     count = models.CharField(max_length=50)
+
 

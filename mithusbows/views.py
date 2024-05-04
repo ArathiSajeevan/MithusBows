@@ -161,3 +161,55 @@ def additem(request):
     return render(request,'additem.html')
 
 
+#display items
+def showitem(request):
+    items = item.objects.all()
+    img = []
+    name = []
+    des = []
+    price = []
+    id = []
+    for i in items:
+        path = i.image
+        img.append(str(path).split("/")[-1])
+
+        nm = i.itemname
+        name.append(nm)
+
+        desc = i.description
+        des.append(desc)
+
+        pr = i.price
+        price.append(pr)
+
+        ids = i.id
+        id.append(ids)
+    mylist = zip(img,name,des,price,id)
+    return render(request,'showitem.html',{'item':mylist})
+
+def viewitem(request):
+    items = item.objects.all()
+    img = []
+    name = []
+    des = []
+    price = []
+    id = []
+    for i in items:
+        path = i.image
+        img.append(str(path).split("/")[-1])
+
+        nm = i.itemname
+        name.append(nm)
+
+        desc = i.description
+        des.append(desc)
+
+        pr = i.price
+        price.append(pr)
+
+        ids = i.id
+        id.append(ids)
+    mylist = zip(img,name,des,price,id)
+    return render(request,'viewitem.html',{'item':mylist})
+
+# def cart(request):
